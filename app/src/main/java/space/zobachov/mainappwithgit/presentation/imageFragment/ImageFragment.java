@@ -1,4 +1,4 @@
-package space.zobachov.mainappwithgit.presentation.mapFragment;
+package space.zobachov.mainappwithgit.presentation.imageFragment;
 
 import android.os.Bundle;
 
