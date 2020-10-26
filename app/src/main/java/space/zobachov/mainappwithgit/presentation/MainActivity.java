@@ -1,17 +1,12 @@
 package space.zobachov.mainappwithgit.presentation;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.view.View;
-
-import com.google.android.gms.maps.MapFragment;
-
 import space.zobachov.mainappwithgit.R;
+import space.zobachov.mainappwithgit.presentation.mapFragment.MapFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MapFragment mapFragment = new MapFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fr_map, mapFragment).commit();
     }
-
-    MapFragment mapFragment = new MapFragment();
-    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-
 }

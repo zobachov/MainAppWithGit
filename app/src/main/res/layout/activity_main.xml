@@ -19,7 +19,6 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fr_map"
         android:layout_width="match_parent"
-        android:layout_height="400dp">
-    </androidx.fragment.app.FragmentContainerView>
+        android:layout_height="400dp"/>
 
 </LinearLayout>
